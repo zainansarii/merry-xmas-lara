@@ -144,9 +144,9 @@
             border-radius: 50%;
             position: relative;
             box-shadow: 
-                0 0 0 8px rgba(255, 255, 255, 0.1),
-                0 0 40px rgba(0, 0, 0, 0.3),
-                inset 0 0 30px rgba(0, 0, 0, 0.1);
+                0 0 0 6px rgba(255, 255, 255, 0.4),
+                0 0 30px rgba(0, 0, 0, 0.4),
+                0 0 60px rgba(0, 0, 0, 0.2);
             transition: transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99);
             background: #1a1a2e;
         }
@@ -331,60 +331,61 @@
             <div class="wheel-wrapper">
                 <div class="wheel-pointer">
                     <svg viewBox="0 0 30 40">
-                        <polygon points="15,40 0,0 30,0" fill="#c41e3a"/>
-                        <polygon points="15,35 5,5 25,5" fill="#8b0000"/>
+                        <polygon points="15,40 0,0 30,0" fill="#fff"/>
+                        <polygon points="15,35 5,5 25,5" fill="#f0e6d3"/>
                     </svg>
                 </div>
                 <div class="wheel" id="wheel">
                     <svg viewBox="0 0 300 300">
-                        <defs>
-                            <path id="textPath1" d="M 150,150 m -100,0 a 100,100 0 0,1 100,-100" fill="none"/>
-                            <path id="textPath2" d="M 150,150 m 0,-100 a 100,100 0 0,1 100,100" fill="none"/>
-                            <path id="textPath3" d="M 150,150 m 100,0 a 100,100 0 0,1 -100,100" fill="none"/>
-                            <path id="textPath4" d="M 150,150 m 0,100 a 100,100 0 0,1 -100,-100" fill="none"/>
-                            <path id="textPath5" d="M 150,150 m -100,0 a 100,100 0 0,0 100,100" fill="none"/>
-                            <path id="textPath6" d="M 150,150 m 0,-100 a 100,100 0 0,0 -100,100" fill="none"/>
-                        </defs>
-                        <!-- Segments -->
-                        <path d="M150,150 L150,0 A150,150 0 0,1 279.9,75 Z" fill="#2d5a3d"/>
-                        <path d="M150,150 L279.9,75 A150,150 0 0,1 279.9,225 Z" fill="#f5f0e6"/>
-                        <path d="M150,150 L279.9,225 A150,150 0 0,1 150,300 Z" fill="#c41e3a"/>
-                        <path d="M150,150 L150,300 A150,150 0 0,1 20.1,225 Z" fill="#2d5a3d"/>
-                        <path d="M150,150 L20.1,225 A150,150 0 0,1 20.1,75 Z" fill="#f5f0e6"/>
-                        <path d="M150,150 L20.1,75 A150,150 0 0,1 150,0 Z" fill="#c41e3a"/>
+                        <!-- Segments - using brighter, more contrasting colors -->
+                        <path d="M150,150 L150,0 A150,150 0 0,1 279.9,75 Z" fill="#165B33"/>
+                        <path d="M150,150 L279.9,75 A150,150 0 0,1 279.9,225 Z" fill="#F8E4C8"/>
+                        <path d="M150,150 L279.9,225 A150,150 0 0,1 150,300 Z" fill="#BB2528"/>
+                        <path d="M150,150 L150,300 A150,150 0 0,1 20.1,225 Z" fill="#165B33"/>
+                        <path d="M150,150 L20.1,225 A150,150 0 0,1 20.1,75 Z" fill="#F8E4C8"/>
+                        <path d="M150,150 L20.1,75 A150,150 0 0,1 150,0 Z" fill="#BB2528"/>
                         <!-- Divider lines -->
-                        <line x1="150" y1="150" x2="150" y2="0" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-                        <line x1="150" y1="150" x2="279.9" y2="75" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-                        <line x1="150" y1="150" x2="279.9" y2="225" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-                        <line x1="150" y1="150" x2="150" y2="300" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-                        <line x1="150" y1="150" x2="20.1" y2="225" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-                        <line x1="150" y1="150" x2="20.1" y2="75" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-                        <!-- Text labels -->
-                        <text transform="rotate(-60, 150, 150)" fill="#fff" font-size="11" font-family="Poppins, sans-serif" font-weight="500">
-                            <tspan x="155" y="55">£15</tspan>
-                        </text>
-                        <text transform="rotate(0, 150, 150)" fill="#1a1a2e" font-size="10" font-family="Poppins, sans-serif" font-weight="500">
-                            <tspan x="175" y="95">Greggs</tspan>
-                            <tspan x="165" y="107">sausage roll</tspan>
-                        </text>
-                        <text transform="rotate(60, 150, 150)" fill="#fff" font-size="10" font-family="Poppins, sans-serif" font-weight="500">
-                            <tspan x="165" y="95">A pedicure</tspan>
-                        </text>
-                        <text transform="rotate(120, 150, 150)" fill="#fff" font-size="10" font-family="Poppins, sans-serif" font-weight="500">
-                            <tspan x="160" y="95">Breakfast</tspan>
-                            <tspan x="170" y="107">in bed</tspan>
-                        </text>
-                        <text transform="rotate(180, 150, 150)" fill="#1a1a2e" font-size="8" font-family="Poppins, sans-serif" font-weight="500">
-                            <tspan x="155" y="90">I thought we</tspan>
-                            <tspan x="155" y="100">weren't doing</tspan>
-                            <tspan x="170" y="110">gifts</tspan>
-                        </text>
-                        <text transform="rotate(240, 150, 150)" fill="#fff" font-size="10" font-family="Poppins, sans-serif" font-weight="600">
-                            <tspan x="157" y="90">Mystery</tspan>
-                            <tspan x="165" y="103">Prize ✨</tspan>
-                        </text>
+                        <line x1="150" y1="150" x2="150" y2="0" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+                        <line x1="150" y1="150" x2="279.9" y2="75" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+                        <line x1="150" y1="150" x2="279.9" y2="225" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+                        <line x1="150" y1="150" x2="150" y2="300" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+                        <line x1="150" y1="150" x2="20.1" y2="225" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+                        <line x1="150" y1="150" x2="20.1" y2="75" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+                        <!-- Text labels - positioned along segment center lines, readable -->
+                        <g font-family="Poppins, sans-serif" font-weight="600" text-anchor="middle">
+                            <!-- Segment 1: Green, top-right (0-60°) - center at 30° -->
+                            <text transform="rotate(30, 150, 150)" x="150" y="45" fill="#fff" font-size="14">£15</text>
+                            
+                            <!-- Segment 2: Cream (60-120°) - center at 90° -->
+                            <text transform="rotate(90, 150, 150)" x="150" y="40" fill="#333" font-size="9">
+                                <tspan x="150" dy="0">Greggs</tspan>
+                                <tspan x="150" dy="11">sausage roll</tspan>
+                            </text>
+                            
+                            <!-- Segment 3: Red (120-180°) - center at 150° -->
+                            <text transform="rotate(150, 150, 150)" x="150" y="45" fill="#fff" font-size="11">A pedicure</text>
+                            
+                            <!-- Segment 4: Green (180-240°) - center at 210° -->
+                            <text transform="rotate(210, 150, 150)" x="150" y="40" fill="#fff" font-size="10">
+                                <tspan x="150" dy="0">Breakfast</tspan>
+                                <tspan x="150" dy="12">in bed</tspan>
+                            </text>
+                            
+                            <!-- Segment 5: Cream (240-300°) - center at 270° -->
+                            <text transform="rotate(270, 150, 150)" x="150" y="35" fill="#333" font-size="8">
+                                <tspan x="150" dy="0">I thought we</tspan>
+                                <tspan x="150" dy="10">weren't doing</tspan>
+                                <tspan x="150" dy="10">gifts</tspan>
+                            </text>
+                            
+                            <!-- Segment 6: Red (300-360°) - center at 330° - MYSTERY PRIZE -->
+                            <text transform="rotate(330, 150, 150)" x="150" y="40" fill="#fff" font-size="11">
+                                <tspan x="150" dy="0">Mystery</tspan>
+                                <tspan x="150" dy="13">Prize ✨</tspan>
+                            </text>
+                        </g>
                         <!-- Outer ring decoration -->
-                        <circle cx="150" cy="150" r="148" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="4"/>
+                        <circle cx="150" cy="150" r="148" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
                     </svg>
                 </div>
                 <div class="wheel-center">❄️</div>
@@ -420,11 +421,7 @@
             }
         }
 
-        // Spin wheel - always lands on Mystery Prize
-        // SVG wheel: segments are 60° each, starting from top going clockwise
-        // Segment order: £15 (330-30°), Greggs (30-90°), Pedicure (90-150°), 
-        // Breakfast (150-210°), No gifts (210-270°), Mystery (270-330°)
-        // Mystery Prize center is at 300° from top
+        // Spin wheel - ALWAYS lands on Mystery Prize (Segment 6: 300-360°, center 330°)
         let isSpinning = false;
         let currentRotation = 0;
 
@@ -437,14 +434,14 @@
             btn.disabled = true;
             btn.textContent = 'Spinning...';
 
-            // Mystery Prize segment is at 270-330° range, center at 300°
-            // To land pointer (at top/0°) on this segment, we rotate wheel so 300° is at top
-            // That means rotating by (360 - 300) = 60° plus full spins
-            const fullSpins = 4 + Math.floor(Math.random() * 2); // 4-5 full spins
-            const targetAngle = 300; // Center of Mystery Prize segment
-            const variation = (Math.random() - 0.5) * 30; // ±15 degrees for realism
+            // Mystery Prize is segment 6 (300-360° range, center at 330°)
+            // Pointer is at top (0°). To land on 330°, wheel must rotate so 330° is at top.
+            // Rotation needed: 360° - 330° = 30° (plus some full spins for drama)
+            const fullSpins = 5 + Math.floor(Math.random() * 3); // 5-7 full spins
+            const landingOffset = 30; // This puts center of Mystery Prize at pointer
+            const variation = (Math.random() - 0.5) * 50; // ±25° variation within the segment
             
-            currentRotation += (fullSpins * 360) + (360 - targetAngle) + variation;
+            currentRotation += (fullSpins * 360) + landingOffset + variation;
             
             wheel.style.transform = `rotate(${currentRotation}deg)`;
 
@@ -457,7 +454,7 @@
 
         // Create confetti effect - Christmas colors
         function createConfetti() {
-            const colors = ['#c41e3a', '#2d5a3d', '#f5f0e6', '#8b0000', '#1e3d2f'];
+            const colors = ['#BB2528', '#165B33', '#F8E4C8', '#fff', '#EA4630'];
             const reveal = document.getElementById('prizeReveal');
             
             for (let i = 0; i < 50; i++) {
